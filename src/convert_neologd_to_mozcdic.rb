@@ -79,7 +79,7 @@ end
 lines = l2.sort
 l2 = []
 
-# Mozc形式で書き出す
+# Mozc 形式で書き出す
 dicfile = File.new(dicname, "w")
 
 lines.length.times do |i|
