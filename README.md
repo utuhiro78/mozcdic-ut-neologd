@@ -11,7 +11,7 @@ Thanks to the mecab-ipadic-NEologd team.
 
 ## License
 
-mozcdic-neologd-ut.txt: [COPYING](https://github.com/neologd/mecab-ipadic-neologd/blob/master/COPYING)
+mozcdic-ut-neologd.txt: [COPYING](https://github.com/neologd/mecab-ipadic-neologd/blob/master/COPYING)
 
 Source code: Apache License, Version 2.0
 
