@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Author: UTUMI Hirosi (utuhiro78 at yahoo dot co dot jp)
-# License: APACHE LICENSE, VERSION 2.0
+# License: Apache License, Version 2.0
 
 ruby convert_neologd_to_mozcdic.rb
 ruby adjust_entries.rb mozcdic-ut-neologd.txt
