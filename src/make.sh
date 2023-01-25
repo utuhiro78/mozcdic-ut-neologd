@@ -9,6 +9,3 @@ ruby filter_unsuitable_words.rb mozcdic-ut-neologd.txt
 
 tar cjf mozcdic-ut-neologd.txt.tar.bz2 mozcdic-ut-neologd.txt
 mv mozcdic-ut-neologd.txt* ../
-
-rm -rf ../../mozcdic-ut-neologd-release/
-rsync -a ../* ../../mozcdic-ut-neologd-release --exclude=jawiki-* --exclude=mecab-* --exclude=mozcdic-ut-*.txt
