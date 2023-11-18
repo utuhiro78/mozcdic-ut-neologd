@@ -1,8 +1,3 @@
----
-title: Mozc UT NEologd Dictionary
-date: 2023-01-15
----
-
 ## Overview
 
 Mozc UT NEologd Dictionary is a dictionary converted from [mecab-ipadic-NEologd](https://github.com/neologd/mecab-ipadic-neologd) for Mozc.
