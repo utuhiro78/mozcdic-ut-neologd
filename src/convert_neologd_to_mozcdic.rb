@@ -19,7 +19,7 @@ filename = "mecab-user-dict-seed." + neologdver + ".csv"
 dicname = "mozcdic-ut-neologd.txt"
 
 # Mozc の一般名詞のID
-id_mozc = "1847"
+id_mozc = "1843"
 
 # mecab-user-dict-seed を読み込む
 file = File.new(filename, "r")
