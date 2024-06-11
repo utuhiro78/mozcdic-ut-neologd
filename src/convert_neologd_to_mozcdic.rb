@@ -19,7 +19,9 @@ filename = "mecab-user-dict-seed." + neologdver + ".csv"
 dicname = "mozcdic-ut-neologd.txt"
 
 # Mozc の一般名詞のID
-id_mozc = "1843"
+url = "https://raw.githubusercontent.com/google/mozc/master/src/data/dictionary_oss/id.def"
+id_mozc = URI.open(url).read.split(" 名詞,一般,")[0]
+id_mozc = id_mozc.split("\n")[-1]
 
 # mecab-user-dict-seed を読み込む
 file = File.new(filename, "r")
