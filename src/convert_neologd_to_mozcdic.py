@@ -23,7 +23,7 @@ with lzma.open(f"mecab-user-dict-seed.{neologdver}.csv.xz") as xz_ref:
     lines = xz_ref.read().decode()
 
 lines = lines.splitlines()
-dicname = "mozcdic-ut-neologd.txt"
+dict_name = "mozcdic-ut-neologd.txt"
 
 # Mozc の一般名詞のID
 url = "https://raw.githubusercontent.com/google/mozc/master/src/data/dictionary_oss/id.def"
@@ -115,5 +115,5 @@ for i in range(len(lines)):
 lines = l2
 l2 = []
 
-with open(dicname, "w", encoding="utf-8") as dicfile:
-    dicfile.writelines(lines)
+with open(dict_name, "w", encoding="utf-8") as dict_file:
+    dict_file.writelines(lines)
