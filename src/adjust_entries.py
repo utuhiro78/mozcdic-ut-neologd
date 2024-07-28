@@ -54,25 +54,24 @@ for i in range(len(lines)):
 
     # 読みが2文字以下の場合はスキップ
     # hyouki_stripが1文字の場合はスキップ
-    # hyoukiが26文字以上の場合はスキップ
-    # 読みの文字数がhyouki_stripの4倍を超える場合はスキップ
-    # （さくらざかふぉーてぃーしっくす[15文字] 櫻坂46[4文字]」までは残す。）
-    # hyouki_stripの文字数*3が読みのバイト数より小さい場合はスキップ
-    # （「あいてぃー[5文字] ITエンジニア[17bytes]」をスキップ。）
-    # （「すのーまん[5文字] SNOWMAN[7bytes]」は残す。）
+    # hyoukiが26文字以上の場合はスキップ。候補ウィンドウが大きくなりすぎる
+    # 読みの文字数をhyouki_stripの文字数で割ったときに、4を超える場合はスキップ
+    #     「さくらざかふぉーてぃーしっくす[15文字] 櫻坂46[4文字]」までは残す。
+    # hyouki_stripのバイト数を読みの文字数で割ったときに、3を超える場合はスキップ
+    #     「あいてぃー[5文字] ITエンジニア[17bytes]」をスキップ。
     # 読みがひらがな以外を含む場合はスキップ
     # hyoukiがコードポイントを含む場合はスキップ
     if len(yomi) < 3 or \
             len(hyouki_strip) < 2 or \
             len(hyouki) > 25 or \
-            len(yomi) > len(hyouki_strip) * 4 or \
-            len(yomi) * 3 < len(hyouki_strip.encode()) or \
+            len(yomi) / len(hyouki_strip) > 4 or \
+            len(hyouki_strip.encode()) / len(yomi) > 3 or \
             yomi != ''.join(re.findall('[ぁ-ゔー]', yomi)) or \
             '\\u' in hyouki:
         continue
 
     # hyouki_stripの数字をつなげると101以上になる場合はスキップ
-    # （「国道120号」「3月26日」はスキップ。「100円ショップ」は残す。）
+    #     「国道120号」「3月26日」はスキップ。「100円ショップ」は残す。
     n = re.sub(r"\D", "", hyouki_strip)
 
     if n != "" and int(n) > 100:
