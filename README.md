@@ -1,6 +1,6 @@
 ## Overview
 
-Mozc UT NEologd Dictionary is a dictionary converted from [mecab-ipadic-NEologd](https://github.com/neologd/mecab-ipadic-neologd) for Mozc.
+A dictionary converted from [mecab-ipadic-NEologd](https://github.com/neologd/mecab-ipadic-neologd) for Mozc.
 
 Thanks to the mecab-ipadic-NEologd team.
 
@@ -12,7 +12,7 @@ Source code: Apache License, Version 2.0
 
 ## Usage
 
-Add mozcdic-ut-*.txt to dictionary00.txt and build Mozc as usual.
+Add the dictionary to dictionary00.txt and build Mozc as usual.
 
 ```
 tar xf mozcdic-ut-*.txt.tar.bz2
